@@ -1,25 +1,25 @@
 output "request_sequence_lookup_compatible_resource_types" {
-  description = "Map of compatible_resource_types values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup except keys with no compatible_resource_types are omitted"
-  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.compatible_resource_types if v.compatible_resource_types != null && length(v.compatible_resource_types) > 0 }
+  description = "Map of compatible_resource_types values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup"
+  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.compatible_resource_types }
 }
 output "request_sequence_lookup_description" {
-  description = "Map of description values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup except keys with no description are omitted"
-  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.description if v.description != null && length(v.description) > 0 }
+  description = "Map of description values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup"
+  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.description }
 }
 output "request_sequence_lookup_id" {
-  description = "Map of id values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup except keys with no id are omitted"
-  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.id if v.id != null && length(v.id) > 0 }
+  description = "Map of id values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup"
+  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.id }
 }
 output "request_sequence_lookup_link" {
-  description = "Map of link values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup except keys with no link are omitted"
-  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.link if v.link != null && length(v.link) > 0 }
+  description = "Map of link values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup"
+  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.link }
 }
 output "request_sequence_lookup_name" {
-  description = "Map of name values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup except keys with no name are omitted"
-  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.name if v.name != null && length(v.name) > 0 }
+  description = "Map of name values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup"
+  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.name }
 }
 output "request_sequence_lookup_resource_id" {
-  description = "Map of resource_id values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup except keys with no resource_id are omitted"
-  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.resource_id if v.resource_id != null && length(v.resource_id) > 0 }
+  description = "Map of resource_id values across all request_sequence_lookup, keyed the same as var.request_sequence_lookup"
+  value       = { for k, v in data.okta_request_sequence.request_sequence_lookup : k => v.resource_id }
 }
 
